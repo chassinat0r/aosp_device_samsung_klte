@@ -177,7 +177,7 @@ void vendor_load_properties()
             set_ro_product_prop(source, "device", "kltevzw");
         }
         property_override("ro.build.description", "kltevzw-user 6.0.1 MMB29M G900VVRU2DQL1 release-keys");
-        property_set("ro.telephony.get_imsi_from_sim", "true");
+        property_override("ro.telephony.get_imsi_from_sim", "true");
         cdma_properties("Verizon", "311480", "0", "10", "vzw");
     } else if (bootloader.find("G900W8") == 0) {
         /* kltecan */
@@ -196,7 +196,7 @@ void vendor_load_properties()
             set_ro_product_prop(source, "device", "kltetfnvzw");
         }
         property_override("ro.build.description", "kltetfnvzw-user 4.4.2 KOT49H S902LUDUAOD3 release-keys");
-        property_set("ro.telephony.get_imsi_from_sim", "true");
+        property_override("ro.telephony.get_imsi_from_sim", "true");
         cdma_properties("TracFone", "310000", "0", "10", "vzw");
     } else {
         gsm_properties("9", "gsm");
